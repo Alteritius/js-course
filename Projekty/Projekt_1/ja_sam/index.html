@@ -1,0 +1,74 @@
+<!-- 
+1. stworzyć plik index.html i strukturę dokumentu
+2. stworzyć przycisk w html
+3. ostylować przycisk i kwadraty, które będę tworzone
+JAVASCRIPT
+1. pobrać przycisk i podpiąć do niego nasłuchiwanie na click
+2. zadeklarować funkcję
+3. w funkcji stworzyć element html (div)
+4. dodać div do strony
+5. stworzyć licznik i uzupełnić zawartość elementu div o wartość licznika
+6. za pomocą instrukcji warunkowej stwierdzić czy dany element jest 5, jeśli tak nadać mu inną klasę 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        display: block;
+        margin: 10px auto;
+      }
+
+      div {
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+        float: left;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .circle {
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Utwórz element</button>
+    <!-- <div>1</div>
+    <div>2</div>
+    <div class="circle">3</div> -->
+
+    <script>
+      const btn = document.querySelector("body button");
+      //   const body = document.querySelector("body");
+      let counter = 0;
+      const addElement = function () {
+        console.log("klik!");
+        const div = document.createElement("div");
+        // counter = ++counter;
+        // ++counter;
+        // console.log(div);
+        div.textContent = ++counter; //wystarczy tutaj inkrementacja
+        if (counter % 5 === 0) {
+          div.classList.add("circle");
+        }
+        // console.log(counter);
+        // console.log(div);
+        document.body.appendChild(div);
+      };
+
+      btn.addEventListener("click", addElement);
+    </script>
+  </body>
+</html>

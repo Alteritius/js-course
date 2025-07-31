@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #000;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        div {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 20px;
+            padding: 10px 5px;
+            margin-right: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div>
+        <button onclick="app.changeColor('white')">Biały</button>
+        <button onclick="app.changeColor('red')">Czerwony</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
